@@ -7,14 +7,53 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5952A13C248AFA72A278DA9B /* Pods_asthma_amigoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 770360BB914C5F06B158E5A3 /* Pods_asthma_amigoTests.framework */; };
+		5D0B4421227481C800A78857 /* DiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B4420227481C800A78857 /* DiaryViewController.swift */; };
+		5D0B44232274829D00A78857 /* AddDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0B44222274829D00A78857 /* AddDiaryViewController.swift */; };
 		5D1533872253AC0E00F44C28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1533862253AC0E00F44C28 /* AppDelegate.swift */; };
-		5D1533892253AC0E00F44C28 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1533882253AC0E00F44C28 /* ViewController.swift */; };
 		5D15338C2253AC0E00F44C28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D15338A2253AC0E00F44C28 /* Main.storyboard */; };
 		5D15338F2253AC0E00F44C28 /* asthma_amigo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5D15338D2253AC0E00F44C28 /* asthma_amigo.xcdatamodeld */; };
 		5D1533912253AC1000F44C28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D1533902253AC1000F44C28 /* Assets.xcassets */; };
 		5D1533942253AC1000F44C28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D1533922253AC1000F44C28 /* LaunchScreen.storyboard */; };
 		5D15339F2253AC1000F44C28 /* asthma_amigoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D15339E2253AC1000F44C28 /* asthma_amigoTests.swift */; };
 		5D1533AA2253AC1000F44C28 /* asthma_amigoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1533A92253AC1000F44C28 /* asthma_amigoUITests.swift */; };
+		5D1533BC2253ED5600F44C28 /* PListHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1533BB2253ED5600F44C28 /* PListHelper.swift */; };
+		5D1533BE2253EDA600F44C28 /* contacts.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D1533BD2253EDA600F44C28 /* contacts.plist */; };
+		5D1533C02254E25000F44C28 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1533BF2254E25000F44C28 /* HomeViewController.swift */; };
+		5D1533C52254F0C400F44C28 /* ActionPlan+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1533C12254F0C300F44C28 /* ActionPlan+CoreDataClass.swift */; };
+		5D1533C62254F0C400F44C28 /* ActionPlan+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1533C22254F0C300F44C28 /* ActionPlan+CoreDataProperties.swift */; };
+		5D1533CA2254FDD800F44C28 /* MedicineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1533C92254FDD800F44C28 /* MedicineViewController.swift */; };
+		5D1533CC225516FE00F44C28 /* MedicineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1533CB225516FE00F44C28 /* MedicineTableViewController.swift */; };
+		5D1533CE2255171E00F44C28 /* MedicineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1533CD2255171E00F44C28 /* MedicineCell.swift */; };
+		5D1533D022553EB500F44C28 /* AddMedicineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1533CF22553EB500F44C28 /* AddMedicineViewController.swift */; };
+		5D1533D22257632F00F44C28 /* LaunchPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1533D12257632F00F44C28 /* LaunchPageViewController.swift */; };
+		5D153411225835A300F44C28 /* MyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D153410225835A300F44C28 /* MyDetailViewController.swift */; };
+		5D153413225836DE00F44C28 /* DocDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D153412225836DE00F44C28 /* DocDetailViewController.swift */; };
+		5D153415225837D500F44C28 /* ChildDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D153414225837D500F44C28 /* ChildDetailViewController.swift */; };
+		5D15341722586B2000F44C28 /* ActionPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D15341622586B2000F44C28 /* ActionPlanViewController.swift */; };
+		5D1534192258C6AA00F44C28 /* AddRelieverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1534182258C6AA00F44C28 /* AddRelieverViewController.swift */; };
+		5D15341B2258D8A300F44C28 /* AddInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D15341A2258D8A300F44C28 /* AddInfoViewController.swift */; };
+		5D15341D2259190500F44C28 /* MedStockTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D15341C2259190500F44C28 /* MedStockTableViewController.swift */; };
+		5D15341F225946AB00F44C28 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D15341E225946AB00F44C28 /* MainTabBarController.swift */; };
+		5D15342122595EA200F44C28 /* EmergencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D15342022595EA200F44C28 /* EmergencyViewController.swift */; };
+		5D59135B2274938A00960431 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D59135A2274938A00960431 /* Location.swift */; };
+		5D59135D2274950900960431 /* Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D59135C2274950900960431 /* Extras.swift */; };
+		5D59135F2274953500960431 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D59135E2274953500960431 /* CurrentWeather.swift */; };
+		5D5913612274969100960431 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5913602274969100960431 /* Extensions.swift */; };
+		5D77A3A2226DA52400757361 /* RemindersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D77A3A1226DA52400757361 /* RemindersViewController.swift */; };
+		5D77A3AF226FAAF900757361 /* MedReminder+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D77A3AB226FAAF900757361 /* MedReminder+CoreDataClass.swift */; };
+		5D77A3B0226FAAF900757361 /* MedReminder+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D77A3AC226FAAF900757361 /* MedReminder+CoreDataProperties.swift */; };
+		5D77A3B1226FAAF900757361 /* Medicine+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D77A3AD226FAAF900757361 /* Medicine+CoreDataClass.swift */; };
+		5D77A3B2226FAAF900757361 /* Medicine+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D77A3AE226FAAF900757361 /* Medicine+CoreDataProperties.swift */; };
+		5D77A3B4226FAD8F00757361 /* RemindersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D77A3B3226FAD8F00757361 /* RemindersTableViewController.swift */; };
+		5D77A3B6226FBC0300757361 /* SetReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D77A3B5226FBC0300757361 /* SetReminderViewController.swift */; };
+		5DB17E02225EA1F200BF8D19 /* MyEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB17E01225EA1F200BF8D19 /* MyEditViewController.swift */; };
+		5DB17E04225EA27A00BF8D19 /* DocEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB17E03225EA27A00BF8D19 /* DocEditViewController.swift */; };
+		5DB17E06225EA2DB00BF8D19 /* ChildEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB17E05225EA2DB00BF8D19 /* ChildEditViewController.swift */; };
+		5DB17E08225EA4FF00BF8D19 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB17E07225EA4FF00BF8D19 /* EditProfileViewController.swift */; };
+		5DD85AFD2267C45900F42029 /* DashBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD85AFC2267C45900F42029 /* DashBoardViewController.swift */; };
+		B9ED672754881212D3BCAC2C /* Pods_asthma_amigo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 525362DF89292E92D8DA21CC /* Pods_asthma_amigo.framework */; };
+		F41DDC2ACEF02F717B63AB1F /* Pods_asthma_amigoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84346983AA2F2DB6697D8459 /* Pods_asthma_amigoUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,9 +74,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4EA68F2AE029414368BD8BD4 /* Pods-asthma_amigo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-asthma_amigo.release.xcconfig"; path = "Pods/Target Support Files/Pods-asthma_amigo/Pods-asthma_amigo.release.xcconfig"; sourceTree = "<group>"; };
+		525362DF89292E92D8DA21CC /* Pods_asthma_amigo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_asthma_amigo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D0B4420227481C800A78857 /* DiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewController.swift; sourceTree = "<group>"; };
+		5D0B44222274829D00A78857 /* AddDiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDiaryViewController.swift; sourceTree = "<group>"; };
 		5D1533832253AC0E00F44C28 /* asthma_amigo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = asthma_amigo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D1533862253AC0E00F44C28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5D1533882253AC0E00F44C28 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5D15338B2253AC0E00F44C28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5D15338E2253AC0E00F44C28 /* asthma_amigo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = asthma_amigo.xcdatamodel; sourceTree = "<group>"; };
 		5D1533902253AC1000F44C28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +91,48 @@
 		5D1533A52253AC1000F44C28 /* asthma_amigoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = asthma_amigoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D1533A92253AC1000F44C28 /* asthma_amigoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = asthma_amigoUITests.swift; sourceTree = "<group>"; };
 		5D1533AB2253AC1000F44C28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D1533BB2253ED5600F44C28 /* PListHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PListHelper.swift; sourceTree = "<group>"; };
+		5D1533BD2253EDA600F44C28 /* contacts.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = contacts.plist; sourceTree = "<group>"; };
+		5D1533BF2254E25000F44C28 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		5D1533C12254F0C300F44C28 /* ActionPlan+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActionPlan+CoreDataClass.swift"; sourceTree = "<group>"; };
+		5D1533C22254F0C300F44C28 /* ActionPlan+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ActionPlan+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		5D1533C92254FDD800F44C28 /* MedicineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineViewController.swift; sourceTree = "<group>"; };
+		5D1533CB225516FE00F44C28 /* MedicineTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineTableViewController.swift; sourceTree = "<group>"; };
+		5D1533CD2255171E00F44C28 /* MedicineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineCell.swift; sourceTree = "<group>"; };
+		5D1533CF22553EB500F44C28 /* AddMedicineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMedicineViewController.swift; sourceTree = "<group>"; };
+		5D1533D12257632F00F44C28 /* LaunchPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchPageViewController.swift; sourceTree = "<group>"; };
+		5D153410225835A300F44C28 /* MyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDetailViewController.swift; sourceTree = "<group>"; };
+		5D153412225836DE00F44C28 /* DocDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocDetailViewController.swift; sourceTree = "<group>"; };
+		5D153414225837D500F44C28 /* ChildDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildDetailViewController.swift; sourceTree = "<group>"; };
+		5D15341622586B2000F44C28 /* ActionPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionPlanViewController.swift; sourceTree = "<group>"; };
+		5D1534182258C6AA00F44C28 /* AddRelieverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRelieverViewController.swift; sourceTree = "<group>"; };
+		5D15341A2258D8A300F44C28 /* AddInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInfoViewController.swift; sourceTree = "<group>"; };
+		5D15341C2259190500F44C28 /* MedStockTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedStockTableViewController.swift; sourceTree = "<group>"; };
+		5D15341E225946AB00F44C28 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		5D15342022595EA200F44C28 /* EmergencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyViewController.swift; sourceTree = "<group>"; };
+		5D59135A2274938A00960431 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		5D59135C2274950900960431 /* Extras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extras.swift; sourceTree = "<group>"; };
+		5D59135E2274953500960431 /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
+		5D5913602274969100960431 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		5D77A3A1226DA52400757361 /* RemindersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersViewController.swift; sourceTree = "<group>"; };
+		5D77A3AB226FAAF900757361 /* MedReminder+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MedReminder+CoreDataClass.swift"; sourceTree = "<group>"; };
+		5D77A3AC226FAAF900757361 /* MedReminder+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MedReminder+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		5D77A3AD226FAAF900757361 /* Medicine+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Medicine+CoreDataClass.swift"; sourceTree = "<group>"; };
+		5D77A3AE226FAAF900757361 /* Medicine+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Medicine+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		5D77A3B3226FAD8F00757361 /* RemindersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersTableViewController.swift; sourceTree = "<group>"; };
+		5D77A3B5226FBC0300757361 /* SetReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetReminderViewController.swift; sourceTree = "<group>"; };
+		5DB17E01225EA1F200BF8D19 /* MyEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEditViewController.swift; sourceTree = "<group>"; };
+		5DB17E03225EA27A00BF8D19 /* DocEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocEditViewController.swift; sourceTree = "<group>"; };
+		5DB17E05225EA2DB00BF8D19 /* ChildEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildEditViewController.swift; sourceTree = "<group>"; };
+		5DB17E07225EA4FF00BF8D19 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		5DD85AFC2267C45900F42029 /* DashBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardViewController.swift; sourceTree = "<group>"; };
+		770360BB914C5F06B158E5A3 /* Pods_asthma_amigoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_asthma_amigoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F4E0A80DE3E2242C68BB52A /* Pods-asthma_amigoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-asthma_amigoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-asthma_amigoUITests/Pods-asthma_amigoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		811C637A51BEEC8F0673217B /* Pods-asthma_amigoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-asthma_amigoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-asthma_amigoTests/Pods-asthma_amigoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		84346983AA2F2DB6697D8459 /* Pods_asthma_amigoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_asthma_amigoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		873475764F6F946FE77C6CCE /* Pods-asthma_amigoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-asthma_amigoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-asthma_amigoTests/Pods-asthma_amigoTests.release.xcconfig"; sourceTree = "<group>"; };
+		8C2DBB4A7B0A50A516FF17C2 /* Pods-asthma_amigo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-asthma_amigo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-asthma_amigo/Pods-asthma_amigo.debug.xcconfig"; sourceTree = "<group>"; };
+		CAE50091C0855CB207C4EB06 /* Pods-asthma_amigoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-asthma_amigoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-asthma_amigoUITests/Pods-asthma_amigoUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +140,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9ED672754881212D3BCAC2C /* Pods_asthma_amigo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +148,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5952A13C248AFA72A278DA9B /* Pods_asthma_amigoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +156,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F41DDC2ACEF02F717B63AB1F /* Pods_asthma_amigoUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +170,8 @@
 				5D15339D2253AC1000F44C28 /* asthma_amigoTests */,
 				5D1533A82253AC1000F44C28 /* asthma_amigoUITests */,
 				5D1533842253AC0E00F44C28 /* Products */,
+				9064B3C764F8F6F3731D02F8 /* Pods */,
+				DB1CA10A2545D879A78F230C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,12 +189,48 @@
 			isa = PBXGroup;
 			children = (
 				5D1533862253AC0E00F44C28 /* AppDelegate.swift */,
-				5D1533882253AC0E00F44C28 /* ViewController.swift */,
 				5D15338A2253AC0E00F44C28 /* Main.storyboard */,
+				5D77A3B5226FBC0300757361 /* SetReminderViewController.swift */,
+				5D1533C12254F0C300F44C28 /* ActionPlan+CoreDataClass.swift */,
+				5D1533C22254F0C300F44C28 /* ActionPlan+CoreDataProperties.swift */,
+				5D77A3AB226FAAF900757361 /* MedReminder+CoreDataClass.swift */,
+				5D77A3AC226FAAF900757361 /* MedReminder+CoreDataProperties.swift */,
+				5D77A3AD226FAAF900757361 /* Medicine+CoreDataClass.swift */,
+				5D77A3AE226FAAF900757361 /* Medicine+CoreDataProperties.swift */,
 				5D1533902253AC1000F44C28 /* Assets.xcassets */,
 				5D1533922253AC1000F44C28 /* LaunchScreen.storyboard */,
 				5D1533952253AC1000F44C28 /* Info.plist */,
 				5D15338D2253AC0E00F44C28 /* asthma_amigo.xcdatamodeld */,
+				5D1533BB2253ED5600F44C28 /* PListHelper.swift */,
+				5D1533BD2253EDA600F44C28 /* contacts.plist */,
+				5D1533BF2254E25000F44C28 /* HomeViewController.swift */,
+				5D1533C92254FDD800F44C28 /* MedicineViewController.swift */,
+				5D1533CB225516FE00F44C28 /* MedicineTableViewController.swift */,
+				5D1533CD2255171E00F44C28 /* MedicineCell.swift */,
+				5D1533CF22553EB500F44C28 /* AddMedicineViewController.swift */,
+				5D1533D12257632F00F44C28 /* LaunchPageViewController.swift */,
+				5D153410225835A300F44C28 /* MyDetailViewController.swift */,
+				5D153412225836DE00F44C28 /* DocDetailViewController.swift */,
+				5D153414225837D500F44C28 /* ChildDetailViewController.swift */,
+				5D15341622586B2000F44C28 /* ActionPlanViewController.swift */,
+				5D1534182258C6AA00F44C28 /* AddRelieverViewController.swift */,
+				5D15341A2258D8A300F44C28 /* AddInfoViewController.swift */,
+				5D15341C2259190500F44C28 /* MedStockTableViewController.swift */,
+				5D15341E225946AB00F44C28 /* MainTabBarController.swift */,
+				5D15342022595EA200F44C28 /* EmergencyViewController.swift */,
+				5DB17E01225EA1F200BF8D19 /* MyEditViewController.swift */,
+				5DB17E03225EA27A00BF8D19 /* DocEditViewController.swift */,
+				5DB17E05225EA2DB00BF8D19 /* ChildEditViewController.swift */,
+				5DB17E07225EA4FF00BF8D19 /* EditProfileViewController.swift */,
+				5DD85AFC2267C45900F42029 /* DashBoardViewController.swift */,
+				5D77A3A1226DA52400757361 /* RemindersViewController.swift */,
+				5D77A3B3226FAD8F00757361 /* RemindersTableViewController.swift */,
+				5D0B4420227481C800A78857 /* DiaryViewController.swift */,
+				5D0B44222274829D00A78857 /* AddDiaryViewController.swift */,
+				5D59135A2274938A00960431 /* Location.swift */,
+				5D59135C2274950900960431 /* Extras.swift */,
+				5D59135E2274953500960431 /* CurrentWeather.swift */,
+				5D5913602274969100960431 /* Extensions.swift */,
 			);
 			path = asthma_amigo;
 			sourceTree = "<group>";
@@ -128,6 +253,29 @@
 			path = asthma_amigoUITests;
 			sourceTree = "<group>";
 		};
+		9064B3C764F8F6F3731D02F8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8C2DBB4A7B0A50A516FF17C2 /* Pods-asthma_amigo.debug.xcconfig */,
+				4EA68F2AE029414368BD8BD4 /* Pods-asthma_amigo.release.xcconfig */,
+				811C637A51BEEC8F0673217B /* Pods-asthma_amigoTests.debug.xcconfig */,
+				873475764F6F946FE77C6CCE /* Pods-asthma_amigoTests.release.xcconfig */,
+				7F4E0A80DE3E2242C68BB52A /* Pods-asthma_amigoUITests.debug.xcconfig */,
+				CAE50091C0855CB207C4EB06 /* Pods-asthma_amigoUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DB1CA10A2545D879A78F230C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				525362DF89292E92D8DA21CC /* Pods_asthma_amigo.framework */,
+				770360BB914C5F06B158E5A3 /* Pods_asthma_amigoTests.framework */,
+				84346983AA2F2DB6697D8459 /* Pods_asthma_amigoUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +283,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5D1533AE2253AC1000F44C28 /* Build configuration list for PBXNativeTarget "asthma_amigo" */;
 			buildPhases = (
+				7C32065740A52E8CA3F2D746 /* [CP] Check Pods Manifest.lock */,
 				5D15337F2253AC0E00F44C28 /* Sources */,
 				5D1533802253AC0E00F44C28 /* Frameworks */,
 				5D1533812253AC0E00F44C28 /* Resources */,
+				3D2A12E10C1BC44BD15896F4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +302,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5D1533B12253AC1000F44C28 /* Build configuration list for PBXNativeTarget "asthma_amigoTests" */;
 			buildPhases = (
+				90FE2869307EBE14CAAD02E1 /* [CP] Check Pods Manifest.lock */,
 				5D1533962253AC1000F44C28 /* Sources */,
 				5D1533972253AC1000F44C28 /* Frameworks */,
 				5D1533982253AC1000F44C28 /* Resources */,
@@ -170,6 +321,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5D1533B42253AC1000F44C28 /* Build configuration list for PBXNativeTarget "asthma_amigoUITests" */;
 			buildPhases = (
+				B3E21FCA46E50A96EAAB5329 /* [CP] Check Pods Manifest.lock */,
 				5D1533A12253AC1000F44C28 /* Sources */,
 				5D1533A22253AC1000F44C28 /* Frameworks */,
 				5D1533A32253AC1000F44C28 /* Resources */,
@@ -235,6 +387,7 @@
 				5D1533942253AC1000F44C28 /* LaunchScreen.storyboard in Resources */,
 				5D1533912253AC1000F44C28 /* Assets.xcassets in Resources */,
 				5D15338C2253AC0E00F44C28 /* Main.storyboard in Resources */,
+				5D1533BE2253EDA600F44C28 /* contacts.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,14 +407,126 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3D2A12E10C1BC44BD15896F4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-asthma_amigo/Pods-asthma_amigo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-asthma_amigo/Pods-asthma_amigo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7C32065740A52E8CA3F2D746 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-asthma_amigo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		90FE2869307EBE14CAAD02E1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-asthma_amigoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B3E21FCA46E50A96EAAB5329 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-asthma_amigoUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5D15337F2253AC0E00F44C28 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D1533892253AC0E00F44C28 /* ViewController.swift in Sources */,
+				5DB17E08225EA4FF00BF8D19 /* EditProfileViewController.swift in Sources */,
+				5D153413225836DE00F44C28 /* DocDetailViewController.swift in Sources */,
+				5D1533C02254E25000F44C28 /* HomeViewController.swift in Sources */,
+				5D77A3B4226FAD8F00757361 /* RemindersTableViewController.swift in Sources */,
+				5D77A3B0226FAAF900757361 /* MedReminder+CoreDataProperties.swift in Sources */,
+				5D1533D022553EB500F44C28 /* AddMedicineViewController.swift in Sources */,
+				5D1534192258C6AA00F44C28 /* AddRelieverViewController.swift in Sources */,
+				5D5913612274969100960431 /* Extensions.swift in Sources */,
+				5D1533BC2253ED5600F44C28 /* PListHelper.swift in Sources */,
+				5D1533CC225516FE00F44C28 /* MedicineTableViewController.swift in Sources */,
+				5D77A3A2226DA52400757361 /* RemindersViewController.swift in Sources */,
+				5DB17E06225EA2DB00BF8D19 /* ChildEditViewController.swift in Sources */,
+				5DD85AFD2267C45900F42029 /* DashBoardViewController.swift in Sources */,
+				5D0B44232274829D00A78857 /* AddDiaryViewController.swift in Sources */,
+				5D15341722586B2000F44C28 /* ActionPlanViewController.swift in Sources */,
+				5D77A3B1226FAAF900757361 /* Medicine+CoreDataClass.swift in Sources */,
+				5D15341B2258D8A300F44C28 /* AddInfoViewController.swift in Sources */,
+				5D77A3AF226FAAF900757361 /* MedReminder+CoreDataClass.swift in Sources */,
+				5DB17E04225EA27A00BF8D19 /* DocEditViewController.swift in Sources */,
+				5D153411225835A300F44C28 /* MyDetailViewController.swift in Sources */,
+				5DB17E02225EA1F200BF8D19 /* MyEditViewController.swift in Sources */,
+				5D15342122595EA200F44C28 /* EmergencyViewController.swift in Sources */,
+				5D153415225837D500F44C28 /* ChildDetailViewController.swift in Sources */,
+				5D1533C62254F0C400F44C28 /* ActionPlan+CoreDataProperties.swift in Sources */,
 				5D15338F2253AC0E00F44C28 /* asthma_amigo.xcdatamodeld in Sources */,
+				5D1533C52254F0C400F44C28 /* ActionPlan+CoreDataClass.swift in Sources */,
+				5D1533D22257632F00F44C28 /* LaunchPageViewController.swift in Sources */,
+				5D0B4421227481C800A78857 /* DiaryViewController.swift in Sources */,
+				5D59135B2274938A00960431 /* Location.swift in Sources */,
+				5D1533CA2254FDD800F44C28 /* MedicineViewController.swift in Sources */,
+				5D15341F225946AB00F44C28 /* MainTabBarController.swift in Sources */,
+				5D77A3B6226FBC0300757361 /* SetReminderViewController.swift in Sources */,
 				5D1533872253AC0E00F44C28 /* AppDelegate.swift in Sources */,
+				5D1533CE2255171E00F44C28 /* MedicineCell.swift in Sources */,
+				5D15341D2259190500F44C28 /* MedStockTableViewController.swift in Sources */,
+				5D59135D2274950900960431 /* Extras.swift in Sources */,
+				5D77A3B2226FAAF900757361 /* Medicine+CoreDataProperties.swift in Sources */,
+				5D59135F2274953500960431 /* CurrentWeather.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,9 +697,11 @@
 		};
 		5D1533AF2253AC1000F44C28 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C2DBB4A7B0A50A516FF17C2 /* Pods-asthma_amigo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D4E88Q87ES;
 				INFOPLIST_FILE = asthma_amigo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -449,9 +716,11 @@
 		};
 		5D1533B02253AC1000F44C28 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EA68F2AE029414368BD8BD4 /* Pods-asthma_amigo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D4E88Q87ES;
 				INFOPLIST_FILE = asthma_amigo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -466,6 +735,7 @@
 		};
 		5D1533B22253AC1000F44C28 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 811C637A51BEEC8F0673217B /* Pods-asthma_amigoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -486,6 +756,7 @@
 		};
 		5D1533B32253AC1000F44C28 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 873475764F6F946FE77C6CCE /* Pods-asthma_amigoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -506,6 +777,7 @@
 		};
 		5D1533B52253AC1000F44C28 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F4E0A80DE3E2242C68BB52A /* Pods-asthma_amigoUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -525,6 +797,7 @@
 		};
 		5D1533B62253AC1000F44C28 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CAE50091C0855CB207C4EB06 /* Pods-asthma_amigoUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

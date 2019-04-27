@@ -1,4 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="18D109" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ActionPlan" representedClassName=".ActionPlan" syncable="YES">
+        <attribute name="info" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="useSpencer" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="contains" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Medicine" inverseName="isPrescribed" inverseEntity="Medicine" syncable="YES"/>
+    </entity>
+    <entity name="Medicine" representedClassName=".Medicine" syncable="YES">
+        <attribute name="dosage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="freq" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isTablet" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stock" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="hasMed" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MedReminder" inverseName="forMed" inverseEntity="MedReminder" syncable="YES"/>
+        <relationship name="isPrescribed" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ActionPlan" inverseName="contains" inverseEntity="ActionPlan" syncable="YES"/>
+    </entity>
+    <entity name="MedReminder" representedClassName=".MedReminder" syncable="YES">
+        <attribute name="hour" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="minute" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="reminderID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="second" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="forMed" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Medicine" inverseName="hasMed" inverseEntity="Medicine" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="ActionPlan" positionX="-36" positionY="9" width="128" height="105"/>
+        <element name="Medicine" positionX="205" positionY="15" width="128" height="165"/>
+        <element name="MedReminder" positionX="81" positionY="72" width="128" height="120"/>
+    </elements>
 </model>
