@@ -1,0 +1,6 @@
+framework module Pods_asthma_amigoTests {
+  umbrella header "Pods-asthma_amigoTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

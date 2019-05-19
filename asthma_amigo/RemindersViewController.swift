@@ -53,6 +53,9 @@ class RemindersViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.navigationBar.barTintColor = UIColor(red: 66/255, green: 83/255, blue: 108/255, alpha: 1)
+        navigationController?.navigationBar.backgroundColor = UIColor(red: 66/255, green: 83/255, blue: 108/255, alpha: 1)
+        
         addShadow(card: whenWellCard)
         addShadow(card: notWellCard)
         addShadow(card: worseCard)
@@ -65,6 +68,9 @@ class RemindersViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         //Empty list so that updated values can be appended
         preventerList?.removeAll()
+        
+        //hide navigation bar
+        //navigationController?.setNavigationBarHidden(true, animated: animated)
         
         //setting buttons as hidden initially
         whenWellButton.isHidden = true

@@ -19,12 +19,44 @@ class ChildEditViewController: UIViewController {
     var plistHelper = PListHelper()
     
     @IBAction func saveChange(_ sender: Any) {
-        let childData = ["First Name": fNameText.text, "Last Name": lNameText.text, "Age": ageText.text]
-        plistHelper.writePlist(namePlist: "contacts", key: "Child", data: childData as AnyObject)
         
-        let alertController = UIAlertController(title: "Sucess", message: "The changes have been successfully saved!", preferredStyle: UIAlertControllerStyle.alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
-        self.present(alertController, animated: true, completion: nil)
+        
+        if fNameText.text != "" && lNameText.text != "" && ageText.text != "" && Int(ageText.text!)! < 16{
+            let childData = ["First Name": fNameText.text, "Last Name": lNameText.text, "Age": ageText.text]
+            plistHelper.writePlist(namePlist: "contacts", key: "Child", data: childData as AnyObject)
+            
+            let alertController = UIAlertController(title: "Sucess", message: "The changes have been successfully saved!", preferredStyle: UIAlertControllerStyle.alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+        }
+        else{
+            
+            var errorMessage: String = "Following errors with form: \n"
+            
+            //validating both fields individually
+            if(fNameText.text == ""){
+                errorMessage.append("Please fill out your child's name \n")
+            }
+            if(lNameText.text == ""){
+                errorMessage.append("Please fill out your child's last name \n")
+            }
+            if(ageText.text == ""){
+                errorMessage.append("Please enter your child's age")
+            }
+            if(ageText.text != ""){
+                if(Int(ageText.text!)! > 15){
+                    errorMessage.append("This app only supports children aged between 0 to 15.")
+                }
+            }
+            
+            
+            //display error message
+            let alertController = UIAlertController(title: "Alert", message: errorMessage, preferredStyle: UIAlertControllerStyle.alert)
+            alertController.addAction(UIAlertAction(title:"Dismiss", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alertController, animated: true, completion: nil)
+            
+        }
+    
         
     }
     
@@ -36,9 +68,17 @@ class ChildEditViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
+        let tap: UITapGestureRecognizer =  UITapGestureRecognizer(target: self, action: #selector(goAwayKeyboard))
+        view.addGestureRecognizer(tap )
+        
         fNameText.text = plistHelper.readPlist(namePlist: "contacts", key: "Child")["First Name"] as? String
         lNameText.text = plistHelper.readPlist(namePlist: "contacts", key: "Child")["Last Name"] as? String
         ageText.text = plistHelper.readPlist(namePlist: "contacts", key: "Child")["Age"] as? String
+        ageText.keyboardType = UIKeyboardType.numberPad
+    }
+    
+    @objc func goAwayKeyboard(){
+        view.endEditing(true )
     }
 
     override func didReceiveMemoryWarning() {

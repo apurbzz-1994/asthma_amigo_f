@@ -28,6 +28,11 @@ class SetReminderViewController: UIViewController{
     
     var selectedMed: Medicine?
     
+    //stores all fetched reminders
+    var allReminders = [MedReminder]()
+    var relatedMed = [MedReminder]()
+    var found: Bool = false
+    
     
     @IBOutlet weak var timePicker: UIDatePicker!
     
@@ -45,15 +50,7 @@ class SetReminderViewController: UIViewController{
         super.init(coder: aDecoder)!
     }
     
-    //    //hours, minutes and seconds
-    //    var pickerData = [["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13",
-    //    "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24"], ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13",
-    //        "14", "15", "16", "17", "18", "19", "20", "21", "22", "23","24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34","35","36","37","38","39","40","41","42","43","44","45","46","47","48",
-    //            "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60"], ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13",
-    //            "14", "15", "16", "17", "18", "19", "20", "21", "22", "23","24", "25", "26", "27", "28", "29","30", "31", "32", "33", "34","35","36","37","38","39","40","41","42","43","44","45","46","47","48",
-    //                "49", "50", "51", "52", "53", "54", "55", "56", "57", "58", "59", "60"]]
-    //
-    //
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -61,6 +58,53 @@ class SetReminderViewController: UIViewController{
         //the time picker stuff
         timePicker?.datePickerMode = .time
         timePicker?.addTarget(self, action: #selector(timeChanged(timePicker: )), for: .valueChanged)
+        
+        let today = Date()
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH"
+        hour = dateFormatter.string(from: today)
+        dateFormatter.dateFormat = "mm"
+        minute = dateFormatter.string(from: today)
+        dateFormatter.dateFormat =  "HH:mm"
+    
+        let timeString = dateFormatter.string(from: today)
+        let date = dateFormatter.date(from: timeString)
+        
+        
+        
+        timePicker.date = date!
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        fetchAllReminders()
+    }
+    
+    func fetchAllReminders(){
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "MedReminder")
+        do{
+            allReminders = (try (managedObjectContext?.fetch(fetchRequest) as? [MedReminder]))!
+            
+            for each in allReminders{
+                if each.forMed?.name == selectedMed?.name{
+                    relatedMed.append(each)
+                }
+            }
+            
+            
+        }
+        catch{
+            fatalError("Failed to fetch actionplans: \(error)")
+        }
+    }
+    
+    func checkForSameReminder() -> Bool{
+        for each in relatedMed{
+            if hour == each.hour && minute == each.minute{
+                //if user provided values match one of the already existing reminders
+                return true            }
+        }
+        return false
     }
     
     @objc func timeChanged(timePicker: UIDatePicker){
@@ -106,42 +150,53 @@ class SetReminderViewController: UIViewController{
     
     
     @IBAction func addReminderOnPress(_ sender: Any) {
-        //creating a new medicine reminder object using the data from the picker
-        let newMedReminder = NSEntityDescription.insertNewObject(forEntityName: "MedReminder", into: managedObjectContext!) as! MedReminder
-        newMedReminder.hour = hour
-        newMedReminder.minute = minute
-        newMedReminder.second = second
         
-        let firstPart: String = (selectedMed?.isPrescribed?.type)!
-        let secondPart: String = (selectedMed?.name)!
-        let uniquePart: String = UUID().uuidString
-        
-        //creating an unique id for the reminder
-        let remID = "\(firstPart)_\(secondPart)_\(uniquePart)"
-        
-        newMedReminder.reminderID = remID
-        
-        //storing the reminder using appropriate medicine
-        selectedMed?.addToHasMed(newMedReminder)
-        
-        //save changes
-        saveData()
-        
-        /*
-         if the current state of the application set by the user matches the state
-         of the medicine this new reminder is associated with, then schedule a notification
-         for this reminder immediately
-         */
-        
-        let currentMood: String = plistHelper.readPlist(namePlist: "contacts", key: "Mood") as! String
-        
-        if selectedMed?.isPrescribed?.type == currentMood{
-            //schedule right away
-            scheduleLocal(medName: (selectedMed?.name)!, medDos: (selectedMed?.dosage)!, h: hour, m: minute, s: second, remID: remID)
+        if !checkForSameReminder(){
+            //creating a new medicine reminder object using the data from the picker
+            let newMedReminder = NSEntityDescription.insertNewObject(forEntityName: "MedReminder", into: managedObjectContext!) as! MedReminder
+            newMedReminder.hour = hour
+            newMedReminder.minute = minute
+            newMedReminder.second = second
+            
+            let firstPart: String = (selectedMed?.isPrescribed?.type)!
+            let secondPart: String = (selectedMed?.name)!
+            let uniquePart: String = UUID().uuidString
+            
+            //creating an unique id for the reminder
+            let remID = "\(firstPart)_\(secondPart)_\(uniquePart)"
+            
+            newMedReminder.reminderID = remID
+            
+            //storing the reminder using appropriate medicine
+            selectedMed?.addToHasMed(newMedReminder)
+            
+            //save changes
+            saveData()
+            
+            /*
+             if the current state of the application set by the user matches the state
+             of the medicine this new reminder is associated with, then schedule a notification
+             for this reminder immediately
+             */
+            
+            let currentMood: String = plistHelper.readPlist(namePlist: "contacts", key: "Mood") as! String
+            
+            if selectedMed?.isPrescribed?.type == currentMood{
+                //schedule right away
+                scheduleLocal(medName: (selectedMed?.name)!, medDos: (selectedMed?.dosage)!, h: hour, m: minute, s: second, remID: remID)
+            }
+            
+            //pop back the controlelr
+            self.navigationController!.popViewController(animated: true)
+        }
+        else{
+            //display error message
+            let alertController = UIAlertController(title: "Alert", message: "A reminder for this time and medicine already exists.", preferredStyle: UIAlertControllerStyle.alert)
+            alertController.addAction(UIAlertAction(title:"Ok", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alertController, animated: true, completion: nil)
         }
         
-        //pop back the controlelr
-        self.navigationController!.popViewController(animated: true)
+        
         
     }
     

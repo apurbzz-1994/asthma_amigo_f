@@ -15,22 +15,19 @@ class EditProfileViewController: UIViewController {
     //views
     @IBOutlet weak var myDetailView: UIView!
     @IBOutlet weak var childDetailView: UIView!
-    @IBOutlet weak var docDetailView: UIView!
-    
-    
-    
-    
 
     
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        myDetailView.alpha = 1
+        childDetailView.alpha = 0
+        //docDetailView.alpha = 0
+        
         // Do any additional setup after loading the view.
-
-        
-        
-        
+        navigationController?.navigationBar.barTintColor = UIColor(red: 66/255, green: 83/255, blue: 108/255, alpha: 1)
+        navigationController?.navigationBar.backgroundColor = UIColor(red: 66/255, green: 83/255, blue: 108/255, alpha: 1)
     }
     
     
@@ -39,22 +36,17 @@ class EditProfileViewController: UIViewController {
         case 0:
             myDetailView.alpha = 1
             childDetailView.alpha = 0
-            docDetailView.alpha = 0
+            //docDetailView.alpha = 0
             break
         case 1:
             myDetailView.alpha = 0
             childDetailView.alpha = 1
-            docDetailView.alpha = 0
-            break
-        case 2:
-            myDetailView.alpha = 0
-            childDetailView.alpha = 0
-            docDetailView.alpha = 1
+            //docDetailView.alpha = 0
             break
         default:
             myDetailView.alpha = 1
             childDetailView.alpha = 0
-            docDetailView.alpha = 0
+            //ocDetailView.alpha = 0
             break
         }
         

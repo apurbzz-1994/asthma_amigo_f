@@ -36,6 +36,10 @@
 		5D15341D2259190500F44C28 /* MedStockTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D15341C2259190500F44C28 /* MedStockTableViewController.swift */; };
 		5D15341F225946AB00F44C28 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D15341E225946AB00F44C28 /* MainTabBarController.swift */; };
 		5D15342122595EA200F44C28 /* EmergencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D15342022595EA200F44C28 /* EmergencyViewController.swift */; };
+		5D352D2B2290E54800277E13 /* Diary+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D352D272290E54700277E13 /* Diary+CoreDataClass.swift */; };
+		5D352D2C2290E54800277E13 /* Diary+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D352D282290E54700277E13 /* Diary+CoreDataProperties.swift */; };
+		5D352D2D2290E54800277E13 /* WeatherAlert+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D352D292290E54800277E13 /* WeatherAlert+CoreDataClass.swift */; };
+		5D352D2E2290E54800277E13 /* WeatherAlert+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D352D2A2290E54800277E13 /* WeatherAlert+CoreDataProperties.swift */; };
 		5D59135B2274938A00960431 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D59135A2274938A00960431 /* Location.swift */; };
 		5D59135D2274950900960431 /* Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D59135C2274950900960431 /* Extras.swift */; };
 		5D59135F2274953500960431 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D59135E2274953500960431 /* CurrentWeather.swift */; };
@@ -52,6 +56,20 @@
 		5DB17E06225EA2DB00BF8D19 /* ChildEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB17E05225EA2DB00BF8D19 /* ChildEditViewController.swift */; };
 		5DB17E08225EA4FF00BF8D19 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB17E07225EA4FF00BF8D19 /* EditProfileViewController.swift */; };
 		5DD85AFD2267C45900F42029 /* DashBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD85AFC2267C45900F42029 /* DashBoardViewController.swift */; };
+		5DE4D05C2275F66A005260C2 /* DiaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE4D05B2275F66A005260C2 /* DiaryTableViewController.swift */; };
+		5DE4D05E2275F697005260C2 /* DiaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE4D05D2275F697005260C2 /* DiaryTableViewCell.swift */; };
+		5DE4D0642276546F005260C2 /* DiaryPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE4D0632276546F005260C2 /* DiaryPageViewController.swift */; };
+		5DE4D06A227A5599005260C2 /* OnBoardOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE4D069227A5599005260C2 /* OnBoardOneViewController.swift */; };
+		5DE4D06C227CB6FE005260C2 /* LocationSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE4D06B227CB6FE005260C2 /* LocationSettingsViewController.swift */; };
+		5DE4D06E2281FDA3005260C2 /* Prediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE4D06D2281FDA3005260C2 /* Prediction.swift */; };
+		5DE4D07222820149005260C2 /* AlertTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE4D07122820149005260C2 /* AlertTableViewCell.swift */; };
+		5DE4D0782283A9EB005260C2 /* WeatherWarningTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE4D0772283A9EB005260C2 /* WeatherWarningTableViewController.swift */; };
+		5DE4D07A228649A7005260C2 /* NotificationSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE4D079228649A7005260C2 /* NotificationSettingsViewController.swift */; };
+		5DE4D09022878F53005260C2 /* AlertDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE4D08F22878F53005260C2 /* AlertDetailsViewController.swift */; };
+		5DE4D0922287C359005260C2 /* AlertDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE4D0912287C359005260C2 /* AlertDiaryViewController.swift */; };
+		5DE4D0942287E5A5005260C2 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE4D0932287E5A5005260C2 /* TutorialViewController.swift */; };
+		5DE4D09622880700005260C2 /* actViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE4D095228806FF005260C2 /* actViewController.swift */; };
+		5DE4D098228808E7005260C2 /* aboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE4D097228808E7005260C2 /* aboutViewController.swift */; };
 		B9ED672754881212D3BCAC2C /* Pods_asthma_amigo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 525362DF89292E92D8DA21CC /* Pods_asthma_amigo.framework */; };
 		F41DDC2ACEF02F717B63AB1F /* Pods_asthma_amigoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84346983AA2F2DB6697D8459 /* Pods_asthma_amigoUITests.framework */; };
 /* End PBXBuildFile section */
@@ -110,6 +128,10 @@
 		5D15341C2259190500F44C28 /* MedStockTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedStockTableViewController.swift; sourceTree = "<group>"; };
 		5D15341E225946AB00F44C28 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		5D15342022595EA200F44C28 /* EmergencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyViewController.swift; sourceTree = "<group>"; };
+		5D352D272290E54700277E13 /* Diary+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Diary+CoreDataClass.swift"; path = "../Diary+CoreDataClass.swift"; sourceTree = "<group>"; };
+		5D352D282290E54700277E13 /* Diary+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Diary+CoreDataProperties.swift"; path = "../Diary+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		5D352D292290E54800277E13 /* WeatherAlert+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "WeatherAlert+CoreDataClass.swift"; path = "../WeatherAlert+CoreDataClass.swift"; sourceTree = "<group>"; };
+		5D352D2A2290E54800277E13 /* WeatherAlert+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "WeatherAlert+CoreDataProperties.swift"; path = "../WeatherAlert+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		5D59135A2274938A00960431 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		5D59135C2274950900960431 /* Extras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extras.swift; sourceTree = "<group>"; };
 		5D59135E2274953500960431 /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
@@ -126,6 +148,20 @@
 		5DB17E05225EA2DB00BF8D19 /* ChildEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildEditViewController.swift; sourceTree = "<group>"; };
 		5DB17E07225EA4FF00BF8D19 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		5DD85AFC2267C45900F42029 /* DashBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardViewController.swift; sourceTree = "<group>"; };
+		5DE4D05B2275F66A005260C2 /* DiaryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryTableViewController.swift; sourceTree = "<group>"; };
+		5DE4D05D2275F697005260C2 /* DiaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryTableViewCell.swift; sourceTree = "<group>"; };
+		5DE4D0632276546F005260C2 /* DiaryPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryPageViewController.swift; sourceTree = "<group>"; };
+		5DE4D069227A5599005260C2 /* OnBoardOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardOneViewController.swift; sourceTree = "<group>"; };
+		5DE4D06B227CB6FE005260C2 /* LocationSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSettingsViewController.swift; sourceTree = "<group>"; };
+		5DE4D06D2281FDA3005260C2 /* Prediction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prediction.swift; sourceTree = "<group>"; };
+		5DE4D07122820149005260C2 /* AlertTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertTableViewCell.swift; sourceTree = "<group>"; };
+		5DE4D0772283A9EB005260C2 /* WeatherWarningTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherWarningTableViewController.swift; sourceTree = "<group>"; };
+		5DE4D079228649A7005260C2 /* NotificationSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationSettingsViewController.swift; sourceTree = "<group>"; };
+		5DE4D08F22878F53005260C2 /* AlertDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDetailsViewController.swift; sourceTree = "<group>"; };
+		5DE4D0912287C359005260C2 /* AlertDiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDiaryViewController.swift; sourceTree = "<group>"; };
+		5DE4D0932287E5A5005260C2 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		5DE4D095228806FF005260C2 /* actViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = actViewController.swift; sourceTree = "<group>"; };
+		5DE4D097228808E7005260C2 /* aboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aboutViewController.swift; sourceTree = "<group>"; };
 		770360BB914C5F06B158E5A3 /* Pods_asthma_amigoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_asthma_amigoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F4E0A80DE3E2242C68BB52A /* Pods-asthma_amigoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-asthma_amigoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-asthma_amigoUITests/Pods-asthma_amigoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		811C637A51BEEC8F0673217B /* Pods-asthma_amigoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-asthma_amigoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-asthma_amigoTests/Pods-asthma_amigoTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -197,6 +233,10 @@
 				5D77A3AC226FAAF900757361 /* MedReminder+CoreDataProperties.swift */,
 				5D77A3AD226FAAF900757361 /* Medicine+CoreDataClass.swift */,
 				5D77A3AE226FAAF900757361 /* Medicine+CoreDataProperties.swift */,
+				5D352D272290E54700277E13 /* Diary+CoreDataClass.swift */,
+				5D352D282290E54700277E13 /* Diary+CoreDataProperties.swift */,
+				5D352D292290E54800277E13 /* WeatherAlert+CoreDataClass.swift */,
+				5D352D2A2290E54800277E13 /* WeatherAlert+CoreDataProperties.swift */,
 				5D1533902253AC1000F44C28 /* Assets.xcassets */,
 				5D1533922253AC1000F44C28 /* LaunchScreen.storyboard */,
 				5D1533952253AC1000F44C28 /* Info.plist */,
@@ -231,6 +271,20 @@
 				5D59135C2274950900960431 /* Extras.swift */,
 				5D59135E2274953500960431 /* CurrentWeather.swift */,
 				5D5913602274969100960431 /* Extensions.swift */,
+				5DE4D05B2275F66A005260C2 /* DiaryTableViewController.swift */,
+				5DE4D05D2275F697005260C2 /* DiaryTableViewCell.swift */,
+				5DE4D0632276546F005260C2 /* DiaryPageViewController.swift */,
+				5DE4D069227A5599005260C2 /* OnBoardOneViewController.swift */,
+				5DE4D06B227CB6FE005260C2 /* LocationSettingsViewController.swift */,
+				5DE4D06D2281FDA3005260C2 /* Prediction.swift */,
+				5DE4D07122820149005260C2 /* AlertTableViewCell.swift */,
+				5DE4D0772283A9EB005260C2 /* WeatherWarningTableViewController.swift */,
+				5DE4D079228649A7005260C2 /* NotificationSettingsViewController.swift */,
+				5DE4D08F22878F53005260C2 /* AlertDetailsViewController.swift */,
+				5DE4D0912287C359005260C2 /* AlertDiaryViewController.swift */,
+				5DE4D0932287E5A5005260C2 /* TutorialViewController.swift */,
+				5DE4D095228806FF005260C2 /* actViewController.swift */,
+				5DE4D097228808E7005260C2 /* aboutViewController.swift */,
 			);
 			path = asthma_amigo;
 			sourceTree = "<group>";
@@ -288,6 +342,7 @@
 				5D1533802253AC0E00F44C28 /* Frameworks */,
 				5D1533812253AC0E00F44C28 /* Resources */,
 				3D2A12E10C1BC44BD15896F4 /* [CP] Embed Pods Frameworks */,
+				6DF3BA40C9625FDEB92817C8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -416,16 +471,36 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-asthma_amigo/Pods-asthma_amigo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-asthma_amigo/Pods-asthma_amigo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6DF3BA40C9625FDEB92817C8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-asthma_amigo/Pods-asthma_amigo-resources.sh",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-asthma_amigo/Pods-asthma_amigo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7C32065740A52E8CA3F2D746 /* [CP] Check Pods Manifest.lock */ = {
@@ -490,16 +565,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DB17E08225EA4FF00BF8D19 /* EditProfileViewController.swift in Sources */,
+				5DE4D05C2275F66A005260C2 /* DiaryTableViewController.swift in Sources */,
 				5D153413225836DE00F44C28 /* DocDetailViewController.swift in Sources */,
+				5D352D2E2290E54800277E13 /* WeatherAlert+CoreDataProperties.swift in Sources */,
+				5DE4D07A228649A7005260C2 /* NotificationSettingsViewController.swift in Sources */,
 				5D1533C02254E25000F44C28 /* HomeViewController.swift in Sources */,
 				5D77A3B4226FAD8F00757361 /* RemindersTableViewController.swift in Sources */,
 				5D77A3B0226FAAF900757361 /* MedReminder+CoreDataProperties.swift in Sources */,
 				5D1533D022553EB500F44C28 /* AddMedicineViewController.swift in Sources */,
+				5DE4D0642276546F005260C2 /* DiaryPageViewController.swift in Sources */,
+				5DE4D0942287E5A5005260C2 /* TutorialViewController.swift in Sources */,
 				5D1534192258C6AA00F44C28 /* AddRelieverViewController.swift in Sources */,
 				5D5913612274969100960431 /* Extensions.swift in Sources */,
 				5D1533BC2253ED5600F44C28 /* PListHelper.swift in Sources */,
 				5D1533CC225516FE00F44C28 /* MedicineTableViewController.swift in Sources */,
 				5D77A3A2226DA52400757361 /* RemindersViewController.swift in Sources */,
+				5D352D2C2290E54800277E13 /* Diary+CoreDataProperties.swift in Sources */,
+				5DE4D09022878F53005260C2 /* AlertDetailsViewController.swift in Sources */,
+				5DE4D0782283A9EB005260C2 /* WeatherWarningTableViewController.swift in Sources */,
 				5DB17E06225EA2DB00BF8D19 /* ChildEditViewController.swift in Sources */,
 				5DD85AFD2267C45900F42029 /* DashBoardViewController.swift in Sources */,
 				5D0B44232274829D00A78857 /* AddDiaryViewController.swift in Sources */,
@@ -508,22 +591,32 @@
 				5D15341B2258D8A300F44C28 /* AddInfoViewController.swift in Sources */,
 				5D77A3AF226FAAF900757361 /* MedReminder+CoreDataClass.swift in Sources */,
 				5DB17E04225EA27A00BF8D19 /* DocEditViewController.swift in Sources */,
+				5D352D2B2290E54800277E13 /* Diary+CoreDataClass.swift in Sources */,
 				5D153411225835A300F44C28 /* MyDetailViewController.swift in Sources */,
 				5DB17E02225EA1F200BF8D19 /* MyEditViewController.swift in Sources */,
 				5D15342122595EA200F44C28 /* EmergencyViewController.swift in Sources */,
+				5DE4D06C227CB6FE005260C2 /* LocationSettingsViewController.swift in Sources */,
+				5D352D2D2290E54800277E13 /* WeatherAlert+CoreDataClass.swift in Sources */,
 				5D153415225837D500F44C28 /* ChildDetailViewController.swift in Sources */,
 				5D1533C62254F0C400F44C28 /* ActionPlan+CoreDataProperties.swift in Sources */,
 				5D15338F2253AC0E00F44C28 /* asthma_amigo.xcdatamodeld in Sources */,
+				5DE4D07222820149005260C2 /* AlertTableViewCell.swift in Sources */,
+				5DE4D06E2281FDA3005260C2 /* Prediction.swift in Sources */,
+				5DE4D09622880700005260C2 /* actViewController.swift in Sources */,
 				5D1533C52254F0C400F44C28 /* ActionPlan+CoreDataClass.swift in Sources */,
+				5DE4D098228808E7005260C2 /* aboutViewController.swift in Sources */,
 				5D1533D22257632F00F44C28 /* LaunchPageViewController.swift in Sources */,
 				5D0B4421227481C800A78857 /* DiaryViewController.swift in Sources */,
 				5D59135B2274938A00960431 /* Location.swift in Sources */,
 				5D1533CA2254FDD800F44C28 /* MedicineViewController.swift in Sources */,
+				5DE4D05E2275F697005260C2 /* DiaryTableViewCell.swift in Sources */,
 				5D15341F225946AB00F44C28 /* MainTabBarController.swift in Sources */,
 				5D77A3B6226FBC0300757361 /* SetReminderViewController.swift in Sources */,
 				5D1533872253AC0E00F44C28 /* AppDelegate.swift in Sources */,
 				5D1533CE2255171E00F44C28 /* MedicineCell.swift in Sources */,
+				5DE4D06A227A5599005260C2 /* OnBoardOneViewController.swift in Sources */,
 				5D15341D2259190500F44C28 /* MedStockTableViewController.swift in Sources */,
+				5DE4D0922287C359005260C2 /* AlertDiaryViewController.swift in Sources */,
 				5D59135D2274950900960431 /* Extras.swift in Sources */,
 				5D77A3B2226FAAF900757361 /* Medicine+CoreDataProperties.swift in Sources */,
 				5D59135F2274953500960431 /* CurrentWeather.swift in Sources */,
@@ -701,13 +794,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = D4E88Q87ES;
+				DEVELOPMENT_TEAM = SY2NAPDH7P;
 				INFOPLIST_FILE = asthma_amigo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Monash.asthma-amigo";
+				PRODUCT_BUNDLE_IDENTIFIER = "NP.asthma-amigo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -720,13 +813,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = D4E88Q87ES;
+				DEVELOPMENT_TEAM = SY2NAPDH7P;
 				INFOPLIST_FILE = asthma_amigo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Monash.asthma-amigo";
+				PRODUCT_BUNDLE_IDENTIFIER = "NP.asthma-amigo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

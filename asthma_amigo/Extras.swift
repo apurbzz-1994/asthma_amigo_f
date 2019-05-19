@@ -10,4 +10,5 @@
 import Foundation
 
 let API_URL = "http://142.93.120.204/plumber/Json?lat=\(Location.sharedInstance.latitude!)&lon=\(Location.sharedInstance.longitude!)"
+
 typealias DownloadComplete = () -> ()

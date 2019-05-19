@@ -19,5 +19,8 @@ target 'asthma_amigo' do
 
   pod 'SwiftyJSON', '~> 4.0'
   pod 'Alamofire', '~> 4.0'
+  pod 'GooglePlaces'
+  pod 'IQKeyboardManagerSwift', '6.0.4'
+
 
 end

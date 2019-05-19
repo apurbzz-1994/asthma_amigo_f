@@ -6,6 +6,22 @@
         <attribute name="useSpencer" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="contains" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Medicine" inverseName="isPrescribed" inverseEntity="Medicine" syncable="YES"/>
     </entity>
+    <entity name="Diary" representedClassName=".Diary" syncable="YES">
+        <attribute name="comments" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="day" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hour" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="humidity" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lat" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="long" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="minute" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="month" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="quality" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="temp" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="trigger" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="year" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="hasAlert" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="WeatherAlert" inverseName="belongToDiary" inverseEntity="WeatherAlert" syncable="YES"/>
+    </entity>
     <entity name="Medicine" representedClassName=".Medicine" syncable="YES">
         <attribute name="dosage" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="freq" optional="YES" attributeType="String" syncable="YES"/>
@@ -23,9 +39,19 @@
         <attribute name="second" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="forMed" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Medicine" inverseName="hasMed" inverseEntity="Medicine" syncable="YES"/>
     </entity>
+    <entity name="WeatherAlert" representedClassName=".WeatherAlert" syncable="YES">
+        <attribute name="dateAndTime" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="humidity" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isSeen" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="qualityAir" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="temperature" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="belongToDiary" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Diary" inverseName="hasAlert" inverseEntity="Diary" syncable="YES"/>
+    </entity>
     <elements>
         <element name="ActionPlan" positionX="-36" positionY="9" width="128" height="105"/>
+        <element name="Diary" positionX="81" positionY="90" width="128" height="255"/>
         <element name="Medicine" positionX="205" positionY="15" width="128" height="165"/>
         <element name="MedReminder" positionX="81" positionY="72" width="128" height="120"/>
+        <element name="WeatherAlert" positionX="90" positionY="153" width="128" height="135"/>
     </elements>
 </model>

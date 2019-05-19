@@ -61,8 +61,17 @@ class AddMedicineViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let tap: UITapGestureRecognizer =  UITapGestureRecognizer(target: self, action: #selector(goAwayKeyboard))
+        view.addGestureRecognizer(tap )
+        
         // Do any additional setup after loading the view.
         //typeText.text = "Add \(type!)"
+        nameText.tintColor = UIColor.black
+        
+    }
+    
+    @objc func goAwayKeyboard(){
+        view.endEditing(true )
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -9,17 +9,23 @@
 import UIKit
 import CoreData
 import UserNotifications
+import GooglePlaces
+import IQKeyboardManagerSwift
+//import CoreLocation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    let locationManager = CLLocationManager()
+    
+    
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         //code for user to authorize getting notifications
-        let center = UNUserNotificationCenter.current()
-        center.requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
+        UNUserNotificationCenter.current().delegate = self as? UNUserNotificationCenterDelegate
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
             if granted {
                 print("Yay!")
             }
@@ -27,6 +33,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print("Fuck!")
             }
         }
+        
+        //Setting Google Place API for autocomplete feature
+        GMSPlacesClient.provideAPIKey("AIzaSyD3641J2yUNog1As0l0s8zfHX7271yjJAY")
+        
+        
+        //setting core location permission
+        //locationManager.requestAlwaysAuthorization()
+        
+        //keyboard stuff
+        IQKeyboardManager.shared.enable = true
+        
+        
         return true
     }
 
@@ -101,5 +119,52 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
+}
+
+extension AppDelegate: UNUserNotificationCenterDelegate{
+    
+    // This function will be called when the app receive notification
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        
+        // show the notification alert (banner), and with sound
+        completionHandler([.alert, .sound])
+    }
+    
+    // This function will be called right after user tap on the notification
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let notificationID = response.notification.request.identifier
+        
+        if notificationID == "healthStatusNotification"{
+            //this is for setting up every morning
+            if let homeVC = storyBoard.instantiateViewController(withIdentifier: "TabBarView") as? MainTabBarController,
+                let rootNavVC = self.window?.rootViewController as? UINavigationController{
+                rootNavVC.pushViewController(homeVC, animated: true)
+            }
+        }
+        else if notificationID.prefix(7) == "weather"{
+            //redirect to alerts page
+            if let homeVC = storyBoard.instantiateViewController(withIdentifier: "weatherAlert") as? WeatherWarningTableViewController,
+                let rootNavVC = self.window?.rootViewController as? UINavigationController{
+                rootNavVC.pushViewController(homeVC, animated: true)
+            }
+            
+        }
+        else{
+            //call the rootController which is a navigation controller in my case
+            if let reminderVC = storyBoard.instantiateViewController(withIdentifier: "RemindersView") as? RemindersViewController,
+                let rootNavVC = self.window?.rootViewController as? UINavigationController{
+                rootNavVC.pushViewController(reminderVC, animated: true)
+            }
+        }
+
+        
+
+
+         //tell the app that we have finished processing the user’s action / response
+        completionHandler()
+    }
 }
 

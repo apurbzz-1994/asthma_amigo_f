@@ -51,15 +51,13 @@ class RemindersTableViewController: UITableViewController {
         super.viewDidLoad()
         
         selectedMedName.text = selectedMed?.name
-        selectedMedDesc.text = "\((selectedMed?.freq)!) tablet/puff(s) every \((selectedMed?.dosage)!) times(s) a day"
+        selectedMedDesc.text = "\((selectedMed?.dosage)!) tablet/puff(s) every \((selectedMed?.freq)!) times(s) a day"
         if (selectedMed?.isTablet)!{
             selectedMedImg.image = UIImage(named: "icons8-pill-48")
         }
         else{
             selectedMedImg.image = UIImage(named: "inhaler_2")
         }
-
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -85,13 +83,23 @@ class RemindersTableViewController: UITableViewController {
 
         // Configure the cell...
         let tempReminder: MedReminder? = medReminderList[indexPath.row]
-        cell.textLabel?.text = "\((tempReminder?.hour)!) : \((tempReminder?.minute)!) : \((tempReminder?.second)!)"
+        
+        //this casues an error if the user does not select anything.
+//        var amOrPm: String = ""
+//        if Int((tempReminder?.hour)!)! > 12{
+//            amOrPm = "PM"
+//        }
+//        else{
+//            amOrPm = "AM"
+//        }
+        
+        cell.textLabel?.text = "\((tempReminder?.hour)!) : \((tempReminder?.minute)!)"
 
         return cell
     }
     
     @IBAction func addReminderOnPress(_ sender: Any) {
-        if medReminderList.count <= Int((selectedMed?.dosage)!)!{
+        if medReminderList.count < Int((selectedMed?.freq)!)!{
             //perform segue
             self.performSegue(withIdentifier: "addReminderSegue", sender: nil)
         }
@@ -120,9 +128,7 @@ class RemindersTableViewController: UITableViewController {
     }
     
     
-    
 
-    
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.

@@ -37,6 +37,13 @@ class AddRelieverViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let tap: UITapGestureRecognizer =  UITapGestureRecognizer(target: self, action: #selector(goAwayKeyboard))
+        view.addGestureRecognizer(tap )
+        
+    }
+    
+    @objc func goAwayKeyboard(){
+        view.endEditing(true )
     }
     
     override func viewWillAppear(_ animated: Bool) {

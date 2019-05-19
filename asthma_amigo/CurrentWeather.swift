@@ -6,7 +6,6 @@
 //  Copyright © 2019 Apurba Nath. All rights reserved.
 //
 
-
 import SwiftyJSON
 import Alamofire
 import Foundation
@@ -20,6 +19,7 @@ class CurrentWeather {
     private var _humidityVal: String!
     private var _airQuality: String!
     private  var  _summary: String!
+    private var _icon: String!
     
     var cityName: String {
         if _cityName == nil {
@@ -65,17 +65,25 @@ class CurrentWeather {
         return _humidityVal
     }
     
-    func downloadCurrentWeather(completed: @escaping DownloadComplete){
-        Alamofire.request(API_URL).responseJSON { (response) in
+    var icon: String {
+        if _icon == nil {
+            _icon = ""
+        }
+        return _icon
+    }
+    
+    func downloadCurrentWeather(api_url: String, completed: @escaping DownloadComplete){
+        Alamofire.request(api_url).responseJSON { (response) in
             print(response)
             switch response.result {
             case .success(let value):
                 print(value)
                 let json = JSON(value)
-                self._cityName = json["Name"].stringValue
+                self._cityName = json["Place"].stringValue
                 print(self._cityName)
                 // let tempDate = json["dt"].double
-                self._weatherType = json["TempDesc"].stringValue
+                self._weatherType = json["weatherType"].stringValue
+                self._icon = json["icon"].stringValue
                 let downloadedTemp = json["TempValue"].double
                 self._humidityVal = json["HumidDesc"].stringValue
                 self._currentTemp = downloadedTemp!

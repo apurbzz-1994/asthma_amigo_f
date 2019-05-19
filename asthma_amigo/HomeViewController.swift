@@ -16,11 +16,14 @@ class HomeViewController: UIViewController {
     //for accessing coredata
     var managedObjectContext: NSManagedObjectContext?
     
+    //cards
+    @IBOutlet weak var happyCard: UIView!
+    @IBOutlet weak var sadCard: UIView!
+    @IBOutlet weak var cryCard: UIView!
+    @IBOutlet weak var emergencyCard: UIView!
     
-    //labels
-    @IBOutlet weak var parentLabel: UILabel!
-    @IBOutlet weak var kidLabel: UILabel!
-    @IBOutlet weak var moodLabel: UILabel!
+    
+    
     
     //declaring helper object for manipulating plist
     var plistHelper = PListHelper()
@@ -32,13 +35,22 @@ class HomeViewController: UIViewController {
         managedObjectContext = (appDelegate?.persistentContainer.viewContext)!
         super.init(coder: aDecoder)!
     }
-
     
+//    override func viewWillDisappear(_ animated: Bool) {
+//        super.viewWillDisappear(animated)
+//        navigationController?.setNavigationBarHidden(false, animated: animated)
+//    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationController?.navigationBar.barTintColor = UIColor(red: 66/255, green: 83/255, blue: 108/255, alpha: 0.5)
-        navigationController?.navigationBar.backgroundColor = UIColor(red: 66/255, green: 83/255, blue: 108/255, alpha: 0.5)
+        addShadow(card: happyCard)
+        addShadow(card: sadCard)
+        addShadow(card: cryCard)
+        addShadow(card: emergencyCard)
+        
+        navigationController?.navigationBar.barTintColor = UIColor(red: 66/255, green: 83/255, blue: 108/255, alpha: 1)
+        navigationController?.navigationBar.backgroundColor = UIColor(red: 66/255, green: 83/255, blue: 108/255, alpha: 1)
         
         //fetch all action plans into the list for lookup and button mapping
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "ActionPlan")
@@ -61,15 +73,19 @@ class HomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        //remove back button
+        //hide navigation bar
+        //navigationController?.setNavigationBarHidden(true, animated: animated)
+        
+        
         self.navigationItem.setHidesBackButton(true, animated:true);
         
         //setting user preferences
-        parentLabel.text = "Hello, \((plistHelper.readPlist(namePlist: "contacts", key: "Parent")["First Name"]!)!)"
-        kidLabel.text = "How is \((plistHelper.readPlist(namePlist: "contacts", key: "Child")["First Name"]!)!) feeling today?"
-        moodLabel.text = "Health: \((plistHelper.readPlist(namePlist: "contacts", key: "Mood")))"
+        //parentLabel.text = "Hello, \((plistHelper.readPlist(namePlist: "contacts", key: "Parent")["First Name"]!)!)"
+        //kidLabel.text = "How is \((plistHelper.readPlist(namePlist: "contacts", key: "Child")["First Name"]!)!) feeling today?"
+        //moodLabel.text = "Health: \((plistHelper.readPlist(namePlist: "contacts", key: "Mood")))"
         
     }
+ 
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -173,6 +189,16 @@ class HomeViewController: UIViewController {
         catch let error{
             print("could not save to core data: \(error)")
         }
+    }
+    
+    func addShadow(card: UIView){
+        card.layer.cornerRadius = 8.0
+        card.layer.shadowColor = UIColor.black.cgColor
+        card.layer.shadowOffset = .zero
+        card.layer.shadowOpacity = 0.6
+        card.layer.shadowRadius = 8.0
+        card.layer.shadowPath = UIBezierPath(rect: card.bounds).cgPath
+        card.layer.shouldRasterize = true
     }
     
 
